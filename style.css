@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 .container{
-    min-height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url(./hero-bcg.jpeg) center/cover no-repeat;
 
@@ -15,38 +15,45 @@
 /*---------navbar------*/
 .navbar {
     display: flex;
-    border: solid 1px black;
+    
     flex-direction: row-reverse;
+    height: 12vh;
     
   }
 a {
-      margin-left: 50px;
-      margin-right: 50px;
-      color: white;
-      text-decoration: none;
-      font-size: large;
-      padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    padding: 8px;
+    
+  }
+  #signIn{
+      background-color:rgba(181, 221, 226, 0.808);
+      color:white;
   }
   /*------start part------*/
   .start{
       display: flex;
       align-items: center;
       justify-content: center;
-      border: solid 1px black;
-      height: 30vh;
+      height: 25vh;
   }
   .start h2{
       color: white;
-      
-  }
+      padding: 3px 15px 3px 15px;
+      border: 2px solid white;
+}
   /*-------Landing page part--*/
   .landingPage{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: solid 1px black;
-    height: 30vh;
+    height: 35vh;
     color: white;
      
   }
@@ -55,6 +62,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid 1px black;
-    height: 30vh;
+    
+    height: 10vh;
   }
