@@ -1,0 +1,32 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+    min-height: 100vh;
+    background: url(./hero-bcg.jpeg) center/cover no-repeat;
+
+}
+.navbar {
+    display: flex;
+    border: solid 1px black;
+    width: 100%;
+    align-items: right;
+    justify-content: right;
+    flex-direction: row-reverse;
+  }
+  
+  a {
+      margin-left: 50px;
+      margin-right: 60px;
+      padding: 10px;
+  }
+  .start{
+    border: solid 1px black;
+  }
+  .landingPage{
+    border: solid 1px black;
+  }
