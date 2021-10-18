@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 .container{
-    min-height: 90vh;
+    min-height: 100vh;
     background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
     url(./hero-bcg.jpeg) center/cover no-repeat;
 
@@ -15,38 +15,153 @@
 /*---------navbar------*/
 .navbar {
     display: flex;
-    
     flex-direction: row-reverse;
     height: 12vh;
+    border: 1px solid black;
     
   }
-a {
+  .navbar a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
-    color: white;
+    border: 1px solid black;
+    color: #fff;
     text-decoration: none;
     font-size: large;
     padding: 8px;
     
   }
-  #signIn{
+  .signIn{
       background-color:rgba(181, 221, 226, 0.808);
-      color:white;
+      color:#fff;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 14px;
   }
   /*------start part------*/
   .start{
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 25vh;
+      height: 40vh;
   }
   .start h2{
-      color: white;
+      color: #fff;
       padding: 3px 15px 3px 15px;
-      border: 2px solid white;
+      border: 2px solid #fff;
+      text-transform: uppercase;
+      padding: 8px 25px;
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 5px;
+}
+/*----------show lgin div   -----*/
+* {
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+body {
+  background:linear-gradient(to right, #3a7bd5, #3a6073);
+  font-family:"Raleway",sans-serif;
+  height:100vh;
+}
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.center button {
+  padding:10px 20px;
+  font-size:15px;
+  font-weight:600;
+  color:#222;
+  background:#f5f5f5;
+  border:none;
+  outline:none;
+  cursor:pointer;
+  border-radius:5px;
+}
+.popup {
+  position:absolute;
+  top:-150%;
+  left:50%;
+  opacity:0;
+  transform:translate(-50%,-50%) scale(1.25);
+  width:380px;
+  padding:20px 30px;
+  background:#fff;
+  box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
+  border-radius:10px;
+  transition:top 0ms ease-in-out 200ms,
+             opacity 200ms ease-in-out 0ms,
+             transform 200ms ease-in-out 0ms; 
+}
+.popup.active {
+  top:50%;
+  opacity:1;
+  transform:translate(-50%,-50%) scale(1);
+  transition:top 0ms ease-in-out 0ms,
+             opacity 200ms ease-in-out 0ms,
+             transform 200ms ease-in-out 0ms;
+}
+.popup .close-btn {
+  position:absolute;
+  top:10px;
+  right:10px;
+  width:15px;
+  height:15px;
+  background:#888;
+  color:#eee;
+  text-align:center;
+  line-height:15px;
+  border-radius:15px;
+  cursor:pointer;
+}
+.popup .form h2 {
+  text-align:center;
+  color:#222;
+  margin:10px 0px 20px;
+  font-size:25px;
+}
+.popup .form .form-element {
+  margin:15px 0px;
+}
+.popup .form .form-element label {
+  font-size:14px;
+  color:#222;
+}
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+  margin-top:5px;
+  display:block;
+  width:100%;
+  padding:10px;
+  outline:none;
+  border:1px solid #aaa;
+  border-radius:5px;
+}
+.popup .form .form-element input[type="checkbox"] {
+  margin-right:5px;
+}
+.popup .form .form-element button {
+  width:100%;
+  height:40px;
+  border:none;
+  outline:none;
+  font-size:16px;
+  background:#222;
+  color:#f5f5f5;
+  border-radius:10px;
+  cursor:pointer;
+}
+.popup .form .form-element a {
+  display:block;
+  text-align:right;
+  font-size:15px;
+  color:#1a79ca;
+  text-decoration:none;
+  font-weight:600;
 }
   /*-------Landing page part--*/
   .landingPage{
@@ -54,14 +169,120 @@ a {
     flex-direction: column;
     align-items: center;
     height: 35vh;
-    color: white;
-     
-  }
+    color: #fff;
+}
+.landingPage h1{
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+    
+    
+}
+.landingPage p{
+    text-align: center;
+    width: 450px;
+    font-family: 'Roboto Slab', serif;
+    font-size: small;
+    font-weight: 10px;
+}
   /*----<!--subscribe part--*/
   .subscribe{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    height: 10vh;
+}
+#subscribeInput{
+   padding: 3px;
+   
+}
+#subscribeButton{
+    padding: 5px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-family: 'Arial','Times New Roman', Times, serif;
+}
+
+/*---Dashboard page----*/
+.customerList{
+  padding: 8px 8px 8px ;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  
+}
+.addCustomer{
+  padding: 8px 8px 8px ;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  
+
+}
+.cList{
+  padding: 8px;
+  
+}
+/*-----clist table----*/
+#customerListTable{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 700px;
+}
+th{
+  color: white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.adcust{
+  padding: 8px;
+}
+
+/*-----add customer form----*/
+#addcustomerheader{
+  text-align: center;
+}
+#addcustomerForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#addcustomerForm form {
+color: white;
+padding: 5px;
+}
+#addcustomerForm form input{
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+
+  }
+  .clickforcustomerAdd{
+    width: 500px;
+    padding: 20px;
+  }
+
+  #submit{
+    background-color: rgba(117, 223, 165, 0.7);
+    color: white;
   }

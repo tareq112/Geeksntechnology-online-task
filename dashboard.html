@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DashBoard</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a class="signIn" id="show-login" href="#">Sign in</a>
+            <a href="#">About us</a>
+            <a href="#">Services</a>
+            <a href="index.html">Home</a>
+
+        </div>
+        <div class="sideMenu">
+            <div class="customerList">
+                <button class="cList">Customer List</button>
+            </div>
+            <div class="addCustomer">
+                <button class="adcust">Add Customer</button>
+            </div>
+        </div>
+        <div id="hiddentable">
+            <div id="customerListTable" >
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>City</th>
+                    </tr>
+                    <tr>
+                        <td>Maria Anders</td>
+                        <td>maria112</td>
+                        <td>maria@gmail.com</td>
+                        <td>Female</td>
+                        <td>Illions</td>
+                    </tr>
+                    <tr>
+                        <td>Yoshi Tannamuri</td>
+                        <td>maria112</td>
+                        <td>maria@gmail.com</td>
+                        <td>Female</td>
+                        <td>Illions</td>
+                    </tr>
+                    <tr>
+                        <td>Helen Bennett</td>
+                        <td>maria112</td>
+                        <td>maria@gmail.com</td>
+                        <td>Female</td>
+                        <td>Illions</td>
+                    </tr>
+                    <tr>
+                        <td>Giovanni Rovelli</td>
+                        <td>maria112</td>
+                        <td>maria@gmail.com</td>
+                        <td>Female</td>
+                        <td>Illions</td>
+                    </tr>
+                    <tr>
+                        <td>Francisco Chang</td>
+                        <td>francis</td>
+                        <td>cisc112@gmail.com</td>
+                        <td>Female</td>
+                        <td>NewYork</td>
+                    </tr>
+                    <tr>
+                        <td>Roland Mendel</td>
+                        <td>maria112</td>
+                        <td>maria@gmail.com</td>
+                        <td>Female</td>
+                        <td>Illions</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div id="addcustomerForm">
+           <form action="">
+                <h1>Add Customer</h1>
+                <label for="name"> Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="userName">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="gender">Gender:</label><br>
+                <input type="text" id="gender" name="gender"><br>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city"><br>
+                <input type="submit" id="submit" name="submit">
+           </form>
+           
+        </div>
+    </div>
+    <script src="jscript.js"></script>
+</body>
+
+</html>
