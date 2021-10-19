@@ -2,70 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
-    <!--navbar -->
-    <div class="container">
-        <div class="navbar">
-            <a class="signIn" id="show-login" href="#">Sign in</a>
-            <a href="#">About us</a>
-            <a href="#">Services</a>
-            <a href="index.html">Home</a>
-        </div>
-        <!--start part-->
-        <div class="start">
-            <h2>start</h2>
-        </div>
-        <!--show log in-->
-        <div class="popup">
-            <div class="close-btn">&times;</div>
-            <div class="form">
-              <h2>Log in</h2>
-              <div class="form-element">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter email">
-              </div>
-              <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password">
-              </div>
-              <div class="form-element">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Remember me</label>
-              </div>
-              <div class="form-element">
-                <button id="sigInDashboard" >Sign in</button>
-              </div>
-              <div class="form-element">
-                <a href="#">Forgot password?</a>
-              </div>
-            </div>
-          </div>
-        <!--Landing page part-->
-        <div class="landingPage">
-            <h1>landing page</h1>
-            <p>In publishing and graphic design, Lorem ipsum is a placeholder
-                text graphic publishing relying ...</p>
-        </div>
-        <!--subscribe part-->
-        <div class="subscribe">
-            <input type="text" name="" id="subscribeInput" placeholder="Enter your email">
-            <a id="subscribeButton">Subscribe Now</a>
-        </div>
+  <!--navbar -->
+  <div class="container">
+    <div class="navbar">
+      <a class="signIn" id="show-login" href="#">Sign in</a>
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="index.html">Home</a>
     </div>
+    <!--start part-->
+    <div class="start">
+      <h2>start</h2>
+    </div>
+    <!--show log in-->
+    <div class="popup">
+      <div class="close-btn">&times</div>
+      <div class="form">
+        <h2>Log in</h2>
+        <div class="form-element">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-element">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+        <div class="form-element">
+          <button id="sigInDashboard">Sign in</button>
+        </div>
+        <div class="form-element">
+          <a href="#">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+    <!--Landing page part-->
+    <div class="landingPage">
+      <h1>landing page</h1>
+      <p>In publishing and graphic design, Lorem ipsum is a placeholder
+        text graphic publishing relying ...</p>
+    </div>
+    <!--subscribe part-->
+    <div class="subscribe">
+      <input type="text" name="" id="subscribeInput" placeholder="Enter your email">
+      <a id="subscribeButton">Subscribe Now</a>
+    </div>
+  </div>
 
-    <script src="jscript.js"></script>
+  
+  <script>
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+      document.querySelector(".popup").classList.remove("active");
+    });
+    document.querySelector("#show-login").addEventListener("click", function () {
+      document.querySelector(".popup").classList.add("active");
+    });
+
+    const sigInDashboard = document.querySelector('#sigInDashboard');
+
+    sigInDashboard.addEventListener('click', () => {
+      location.href = "dashboard.html";
+
+
+    });
+
+  </script>
+
+
 </body>
 
 </html>
